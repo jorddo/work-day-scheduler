@@ -18,18 +18,6 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
-      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script> -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"
-      integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <link rel="stylesheet" href="./Develop/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -42,7 +30,7 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="row time-block">
+      <div id="hr08" class="row time-block">
         <div class="col-md-1">8 AM</div>
         <textarea class="col-md-10"></textarea>
         <button class="saveBtn col-md-1">
@@ -50,7 +38,7 @@
         </button>
       </div>
 
-      <div class="row time-block">
+      <div id="hr09" class="row time-block">
         <div class="col-md-1">9 AM</div>
         <textarea class="col-md-10"></textarea>
         <button class="saveBtn col-md-1">
@@ -58,7 +46,7 @@
         </button>
       </div>
 
-      <div class="row time-block">
+      <div id="hr10" class="row time-block">
         <div class="col-md-1">10 AM</div>
         <textarea class="col-md-10"></textarea>
         <button class="saveBtn col-md-1">
@@ -66,7 +54,7 @@
         </button>
       </div>
 
-      <div class="row time-block">
+      <div id="hr11" class="row time-block">
         <div class="col-md-1">11 AM</div>
         <textarea class="col-md-10"></textarea>
         <button class="saveBtn col-md-1">
@@ -74,7 +62,7 @@
         </button>
       </div>
 
-      <div class="row time-block">
+      <div id="hr12" class="row time-block">
         <div class="col-md-1">12 PM</div>
         <textarea class="col-md-10"></textarea>
         <button class="saveBtn col-md-1">
@@ -82,7 +70,7 @@
         </button>
       </div>
 
-      <div class="row time-block">
+      <div id="hr13" class="row time-block">
         <div class="col-md-1">1 PM</div>
         <textarea class="col-md-10"></textarea>
         <button class="saveBtn col-md-1">
@@ -90,7 +78,7 @@
         </button>
       </div>
 
-      <div class="row time-block">
+      <div id="hr14" class="row time-block">
         <div class="col-md-1">2 PM</div>
         <textarea class="col-md-10"></textarea>
         <button class="saveBtn col-md-1">
@@ -98,7 +86,7 @@
         </button>
       </div>
 
-      <div class="row time-block">
+      <div id="hr15" class="row time-block">
         <div class="col-md-1">3 PM</div>
         <textarea class="col-md-10"></textarea>
         <button class="saveBtn col-md-1">
@@ -106,7 +94,7 @@
         </button>
       </div>
 
-      <div class="row time-block">
+      <div id="hr16" class="row time-block">
         <div class="col-md-1">4 PM</div>
         <textarea class="col-md-10"></textarea>
         <button class="saveBtn col-md-1">
@@ -114,7 +102,7 @@
         </button>
       </div>
 
-      <div class="row time-block">
+      <div id="hr17" class="row time-block">
         <div class="col-md-1">5 PM</div>
         <textarea class="col-md-10"></textarea>
         <button class="saveBtn col-md-1">
@@ -124,7 +112,12 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"
+      integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="Develop/js/app.js"></script>
   </body>
 </html>
