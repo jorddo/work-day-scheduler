@@ -1,21 +1,34 @@
 // Create current date
-let today = moment().format('MMM Do YYYY');
+let today = dayjs().format('MMM-DD-YYYY');
 // display date
-$('#currentDay').html(today);
+$('#currentDay').text(today);
 
 // Color-code time blocks for past, present and future
 // 	if time is equal to current hour, color red
 // else if time is more than current hour, color gray
 //else color green
+//COLOR CHANGE FUNCTION
 function hourVal() {
-  let currentHour = moment().hour();
-  console.log(currentHour);
-  // determination of color
-  // if () {
-  //   // need to add classes for red, gray, green
-  // }
+  let currentHour = dayjs().hour();
+  //need variable to represent time listed on block - PLACEHOLDER will represent this for now
+  $('.time-block').each(function (index) {
+    console.log(index + ': ' + $(this).text());
+  });
+
+  if (currentHour === PLACEHOLDER) {
+    $(this).addClass('present');
+    $(this).removeClass('past');
+    $(this).removeClass('future');
+  } else if (currentHour > PLACEHOLDER) {
+    $(this).addClass('past');
+    $(this).removeClass('present');
+    $(this).removeClass('future');
+  } else {
+    $(this).addClass('future');
+    $(this).removeClass('present');
+    $(this).removeClass('past');
+  }
 }
-hourVal();
 
 // Allow user to type in event in timeblocks
 // 	-input fields, with text saved in local storage
