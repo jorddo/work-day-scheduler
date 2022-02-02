@@ -1,36 +1,44 @@
-// Create current date
-let today = dayjs().format('MMM-DD-YYYY');
-// display date
-$('#currentDay').text(today);
+$(document).ready(function () {
+  // Create current date
+  let today = dayjs().format('MMM-DD-YYYY');
+  // display date
+  $('#currentDay').text(today);
 
-// Color-code time blocks for past, present and future
-// 	if time is equal to current hour, color red
-// else if time is more than current hour, color gray
-//else color green
-//COLOR CHANGE FUNCTION
-function hourVal() {
-  let currentHour = dayjs().hour();
+  //button click listener to save
+  $('.saveBtn').click(function () {
+    let text = $('.txt').val();
+    // set text inputs into storage
+    localStorage.setItem('text', JSON.stringify(text));
 
-  // looping over blocks
-  $('.time-block').each(function () {
-    let evalHour = parseInt($(this).attr('id').split('hr')[1]);
-    if (currentHour === evalHour) {
-      $(this).addClass('present');
-      $(this).removeClass('past');
-      $(this).removeClass('future');
-    } else if (currentHour > evalHour) {
-      $(this).addClass('past');
-      $(this).removeClass('present');
-      $(this).removeClass('future');
-    } else {
-      $(this).addClass('future');
-      $(this).removeClass('present');
-      $(this).removeClass('past');
-    }
+    // localStorage.setIem(key, value)
   });
-}
 
-hourVal();
+  //COLOR CHANGE FUNCTION
+  function hourVal() {
+    let currentHour = dayjs().hour();
+
+    // looping over blocks
+    $('.time-block').each(function () {
+      let evalHour = parseInt($(this).attr('id').split('hr')[1]);
+      if (currentHour === evalHour) {
+        $(this).addClass('present');
+        $(this).removeClass('past');
+        $(this).removeClass('future');
+      } else if (currentHour > evalHour) {
+        $(this).addClass('past');
+        $(this).removeClass('present');
+        $(this).removeClass('future');
+      } else {
+        $(this).addClass('future');
+        $(this).removeClass('present');
+        $(this).removeClass('past');
+      }
+    });
+  }
+
+  hourVal();
+});
+
 // Allow user to type in event in timeblocks
 // 	-input fields, with text saved in local storage
 // 	-attribute that indicates time-block on input fields
